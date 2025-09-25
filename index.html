@@ -1,159 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>Template — Rainbow text examples</title>
-  <link rel="icon" type="image/x-icon" href="ChatGPT Image Sep 21, 2025, 07_46_44 AM.ico">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shotbyanthony - Event & Portrait Photography</title>
+    <meta name="description" content="Professional event and portrait photographer specializing in capturing authentic moments. Canon and Olympus equipment for stunning results." />
+    <meta name="author" content="shotbyanthony" />
 
-  <style>
-    /* --- Basic page styles --- */
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-      padding: 40px;
-      line-height: 1.4;
-      background: #f6f7fb;
-      color: #111;
-    }
+    <meta property="og:title" content="shotbyanthony - Event & Portrait Photography" />
+    <meta property="og:description" content="Professional event and portrait photographer specializing in capturing authentic moments." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    h1 { margin-top: 0; }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-    section { margin: 28px 0; padding: 18px; background: #fff; border-radius: 12px; box-shadow: 0 6px 18px rgba(12,18,30,0.06); }
-
-    /* -------------------------
-       1) Gradient text (static)
-       ------------------------- */
-    .rainbow {
-      font-size: 3rem;
-      font-weight: 800;
-      background: linear-gradient(90deg,
-        #ff004d, #ff7a00, #fffa00, #00c200, #00e6ff, #004bff, #8a00ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent; /* required for WebKit */
-      display: inline-block;
-    }
-
-    /* -------------------------
-       2) Animated rainbow gradient
-       ------------------------- */
-    .rainbow-anim {
-      font-size: 2.4rem;
-      font-weight: 800;
-      background: linear-gradient(270deg,
-        #ff004d, #ff7a00, #fffa00, #00c200, #00e6ff, #004bff, #8a00ff, #ff004d);
-      background-size: 200% 200%;
-      -webkit-text-fill-color: transparent;
-      animation: rainbowShift 6s linear infinite;
-    }
-
-    @keyframes rainbowShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* -------------------------
-       3) Per-letter rainbow (CSS-only)
-       - Wrap text in spans or use JS to auto-split
-       ------------------------- */
-    .per-letter { font-size: 2rem; font-weight: 700; margin: 0; }
-    .per-letter span { display:inline-block; padding: 0 1px; }
-
-    /* quick repeating palette using nth-child */
-    .per-letter span:nth-child(7n+1){ color:#ff004d; }
-    .per-letter span:nth-child(7n+2){ color:#ff7a00; }
-    .per-letter span:nth-child(7n+3){ color:#fffa00; }
-    .per-letter span:nth-child(7n+4){ color:#00c200; }
-    .per-letter span:nth-child(7n+5){ color:#00e6ff; }
-    .per-letter span:nth-child(7n+6){ color:#004bff; }
-    .per-letter span:nth-child(7n+7){ color:#8a00ff; }
-
-    /* -------------------------
-       4) SVG text container sizing
-       ------------------------- */
-    .svg-wrap { width: 100%; max-width: 800px; margin-top: 8px; }
-  </style>
-</head>
-<body>
-
-  <h1>Template</h1>
-
-  <section>
-    <h3>Cody is</h3>
-    <p class="rainbow">Rainbow Gradient Text</p>
-    <p style="margin-top:10px; font-size:0.95rem; color:#666;">
-      Uses <code>background-clip: text</code> and transparent text fill. Works well in modern browsers.
-    </p>
-  </section>
-
-  <section>
-    <h3>Very so fucking</h3>
-    <p class="rainbow-anim">Animated Rainbow</p>
-    <p style="margin-top:10px; font-size:0.95rem; color:#666;">
-      The gradient background is moved with an animation for that flowing rainbow look.
-    </p>
-  </section>
-
-  <section>
-    <h3>very gay and</h3>
-
-    <!--
-      Manual method: wrap each letter in a span.
-      If you prefer automatic splitting, you can run a tiny JS snippet to wrap letters for you.
-    -->
-    <p class="per-letter" id="splitExample">
-      <!-- Example letters manually wrapped; below the JS will also split the sentence automatically -->
-      <span>R</span><span>a</span><span>i</span><span>n</span><span>b</span><span>o</span><span>w</span>
-      <span> </span>
-      <span>in</span><span>d</span><span>ee</span><span>d</span>
-    </p>
-  </section>
-
-  <section>
-    <div class="svg-wrap" aria-hidden="true">
-      <svg viewBox="0 0 900 120" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="g" x1="0" x2="1">
-            <stop offset="0%" stop-color="#ff004d"/>
-            <stop offset="16%" stop-color="#ff7a00"/>
-            <stop offset="33%" stop-color="#fffa00"/>
-            <stop offset="50%" stop-color="#00c200"/>
-            <stop offset="66%" stop-color="#00e6ff"/>
-            <stop offset="83%" stop-color="#004bff"/>
-            <stop offset="100%" stop-color="#8a00ff"/>
-          </linearGradient>
-        </defs>
-        <text x="10" y="82" font-size="72" font-weight="700" fill="url(#g)">SVG Rainbow Text</text>
-      </svg>
-    </div>
-  </section>
-
-  <script>
-    // Small helper: split the innerText of an element into <span> per character
-    function splitToSpans(el) {
-      const text = el.textContent.trim();
-      el.innerHTML = ''; // clear
-      for (const ch of text) {
-        const span = document.createElement('span');
-        span.textContent = ch;
-        el.appendChild(span);
-      }
-    }
-
-    // Hook up button: auto-split a sample sentence
-    document.getElementById('autoSplitBtn').addEventListener('click', () => {
-      const target = document.getElementById('splitExample');
-      // If already split (spans exist) then do nothing
-      if (target.querySelectorAll('span').length > 1) {
-        // already split manually in this example — recreate with a different sentence to demo
-        target.textContent = 'Auto split rainbow text!';
-      }
-      splitToSpans(target);
-    });
-
-    // Optional: auto-split on load for any element with data-split attribute (uncomment to enable)
-    // document.querySelectorAll('[data-split]').forEach(el => splitToSpans(el));
-  </script>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
