@@ -1,13 +1,273 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shot by Anthony - Event & Portrait Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Shot by Anthony</h1>
+                <p>Event & Portrait Photography</p>
+            </div>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#gear">Gear</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-  <h1>Template</h1>
-  
-  <p>This is a blank template for a web page.</p>
-  
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-greeting">Good afternoon.</h2>
+                <p class="hero-description">
+                    I'm a passionate photographer specializing in event and portrait photography. 
+                    I capture authentic moments and create stunning portraits that tell your story, 
+                    using professional equipment to deliver exceptional results.
+                </p>
+            </div>
+        </section>
+
+        <section id="work" class="work-section">
+            <div class="section-header">
+                <h3>Selected work</h3>
+                <div class="work-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="portraits">Portraits</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="videography">Videography</button>
+                </div>
+            </div>
+            
+            <div class="work-grid">
+                <div class="work-item" data-category="portraits">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Portrait Photography">
+                    <div class="work-overlay">
+                        <h4>Portrait Session</h4>
+                        <p>Professional headshots and lifestyle portraits</p>
+                        <div class="work-meta">
+                            <span>Canon 70D</span>
+                            <span>50mm f/1.8</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item" data-category="events">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Event Photography">
+                    <div class="work-overlay">
+                        <h4>Wedding Event</h4>
+                        <p>Capturing special moments and celebrations</p>
+                        <div class="work-meta">
+                            <span>Canon 700D</span>
+                            <span>18-55mm</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item" data-category="portraits">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Creative Portrait">
+                    <div class="work-overlay">
+                        <h4>Creative Portraits</h4>
+                        <p>Artistic and creative portrait sessions</p>
+                        <div class="work-meta">
+                            <span>Olympus XZ-10</span>
+                            <span>Built-in lens</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item" data-category="videography">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Videography">
+                    <div class="work-overlay">
+                        <h4>Event Videography</h4>
+                        <p>Professional video coverage with wireless audio</p>
+                        <div class="work-meta">
+                            <span>Canon 70D</span>
+                            <span>Movo Wireless Mics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item" data-category="events">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Corporate Event">
+                    <div class="work-overlay">
+                        <h4>Corporate Events</h4>
+                        <p>Professional business event coverage</p>
+                        <div class="work-meta">
+                            <span>Canon 700D</span>
+                            <span>55-250mm</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item" data-category="portraits">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Family Portrait">
+                    <div class="work-overlay">
+                        <h4>Family Portraits</h4>
+                        <p>Natural family photography sessions</p>
+                        <div class="work-meta">
+                            <span>Canon 70D</span>
+                            <span>50mm f/1.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gear" class="gear-section">
+            <div class="section-header">
+                <h3>My Equipment</h3>
+                <p>Professional gear for exceptional results</p>
+            </div>
+            
+            <div class="gear-grid">
+                <div class="gear-category">
+                    <h4>Cameras</h4>
+                    <div class="gear-items">
+                        <div class="gear-item">
+                            <h5>Canon EOS 70D</h5>
+                            <p>Professional DSLR with advanced autofocus</p>
+                        </div>
+                        <div class="gear-item">
+                            <h5>Canon EOS 700D</h5>
+                            <p>Versatile DSLR for various shooting conditions</p>
+                        </div>
+                        <div class="gear-item">
+                            <h5>Olympus XZ-10</h5>
+                            <p>Compact camera for creative shots</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gear-category">
+                    <h4>Lenses</h4>
+                    <div class="gear-items">
+                        <div class="gear-item">
+                            <h5>18-55mm</h5>
+                            <p>Versatile standard zoom lens</p>
+                        </div>
+                        <div class="gear-item">
+                            <h5>55-250mm</h5>
+                            <p>Telephoto lens for distant subjects</p>
+                        </div>
+                        <div class="gear-item">
+                            <h5>50mm f/1.8</h5>
+                            <p>Prime lens perfect for portraits</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gear-category">
+                    <h4>Audio</h4>
+                    <div class="gear-items">
+                        <div class="gear-item">
+                            <h5>Movo Wireless Mics</h5>
+                            <p>Professional wireless audio for videography</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>If you would like to discuss a project or book a session, I'm always ready to chat.</p>
+                    <button class="contact-btn" onclick="document.getElementById('contactForm').scrollIntoView()">Get in touch</button>
+                </div>
+                
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xpzvgqjr" method="POST">
+                    <input type="hidden" name="_to" value="anthonyelphick58@gmail.com">
+                    <input type="hidden" name="_subject" value="New Photography Inquiry - Shot by Anthony">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="camera">Preferred Camera</label>
+                            <select id="camera" name="camera">
+                                <option value="">Select Camera</option>
+                                <option value="canon-70d">Canon EOS 70D</option>
+                                <option value="canon-700d">Canon EOS 700D</option>
+                                <option value="olympus-xz10">Olympus XZ-10</option>
+                                <option value="no-preference">No Preference</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lens">Preferred Lens</label>
+                            <select id="lens" name="lens">
+                                <option value="">Select Lens</option>
+                                <option value="18-55mm">18-55mm</option>
+                                <option value="55-250mm">55-250mm</option>
+                                <option value="50mm-1.8">50mm f/1.8</option>
+                                <option value="no-preference">No Preference</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectType">Project Type</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select Project Type</option>
+                            <option value="portrait">Portrait Photography</option>
+                            <option value="event">Event Photography</option>
+                            <option value="videography">Videography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, event date, location, and any specific requirements..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>Shot by Anthony</h4>
+                <p>Professional Event & Portrait Photography</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:anthonyelphick58@gmail.com">anthonyelphick58@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shot by Anthony. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
