@@ -108,3 +108,43 @@ document.addEventListener("DOMContentLoaded", () => {
     item.classList.add("visible")
   })
 })
+
+/* ==============================
+   Lightbox Functionality
+   ============================== */
+/* ==============================
+   Lightbox Functionality
+   ============================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.querySelector(".close");
+  const workImages = document.querySelectorAll(".work-item img");
+
+  // Ensure hidden on page load
+  lightbox.style.display = "none";
+
+  workImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";          // Show overlay
+      lightboxImg.src = img.src;                 // Set clicked image
+      captionText.textContent = img.alt;         // Set caption
+      document.body.style.overflow = "hidden";  // Prevent background scroll
+    });
+  });
+
+  // Close when clicking X
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  // Close when clicking outside the image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+});
